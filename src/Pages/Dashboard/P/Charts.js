@@ -10,9 +10,11 @@ import {
   Tooltip,
   Legend,
   ArcElement,
+  LineController, // <-- Add this import
 } from "chart.js";
 import { Bar, Line, Doughnut } from "react-chartjs-2";
 
+// Register the necessary components for all chart types
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,7 +24,8 @@ ChartJS.register(
   ArcElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  LineController // <-- Register the LineController
 );
 
 export const LineChart = ({ data2, color }) => {
